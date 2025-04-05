@@ -134,14 +134,14 @@ const createScrollProgress = () => {
     const progress = document.createElement('div');
     progress.className = 'scroll-progress';
     document.body.appendChild(progress);
-    
+   
     window.addEventListener('scroll', () => {
         const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (window.scrollY / windowHeight) * 100;
         progress.style.transform = `scaleX(${scrolled / 100})`;
     });
 };
-
+ 
 // Enhanced menu population with animations
 function populateMenu() {
     const shotsContainer = document.querySelector('#shots .menu-items');
@@ -151,7 +151,7 @@ function populateMenu() {
         menuItem.style.opacity = '0';
         shotsContainer.appendChild(menuItem);
     });
-
+ 
     const cocktailsContainer = document.querySelector('#cocktails .menu-items');
     menuData.cocktails.forEach((item, index) => {
         const menuItem = createMenuItem(item);
@@ -160,7 +160,7 @@ function populateMenu() {
         cocktailsContainer.appendChild(menuItem);
     });
 }
-
+ 
 function createMenuItem(item) {
     const div = document.createElement('div');
     div.className = 'menu-item';
@@ -170,12 +170,12 @@ function createMenuItem(item) {
     `;
     return div;
 }
-
+ 
 // Enhanced smooth scrolling with active section highlighting
 const smoothScroll = () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
-
+ 
     const setActiveLink = () => {
         let current = '';
         sections.forEach(section => {
@@ -184,7 +184,7 @@ const smoothScroll = () => {
                 current = section.getAttribute('id');
             }
         });
-
+ 
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -192,7 +192,7 @@ const smoothScroll = () => {
             }
         });
     };
-
+ 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -201,10 +201,10 @@ const smoothScroll = () => {
             });
         });
     });
-
+ 
     window.addEventListener('scroll', setActiveLink);
 };
-
+ 
 // Enhanced navbar animation
 const enhanceNavbar = () => {
     const navbar = document.querySelector('.navbar');
@@ -216,7 +216,7 @@ const enhanceNavbar = () => {
         }
     });
 };
-
+ 
 // Parallax effect for hero section
 const addParallax = () => {
     const hero = document.querySelector('.hero');
@@ -225,7 +225,7 @@ const addParallax = () => {
         hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
     });
 };
-
+ 
 // Initialize all features
 document.addEventListener('DOMContentLoaded', () => {
     createScrollProgress();
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     enhanceNavbar();
     addParallax();
 });
-
+ 
 // Intersection Observer for fade-in animations
 const observeElements = () => {
     const observer = new IntersectionObserver((entries) => {
@@ -244,11 +244,11 @@ const observeElements = () => {
             }
         });
     }, { threshold: 0.1 });
-
+ 
     document.querySelectorAll('.menu-category, .gallery-item, .contact-item').forEach(el => {
         observer.observe(el);
     });
 };
-
+ 
 // Initialize intersection observer
 observeElements();
