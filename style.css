@@ -542,6 +542,9 @@ footer::before {
 
 /* Enhanced Mobile Responsiveness */
 @media (max-width: 768px) {
+    .social-link{
+        padding: 3rem ;
+    }
     .nav-links {
         display: none;
     }
