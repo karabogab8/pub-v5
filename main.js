@@ -55,6 +55,14 @@ const menuData = {
             description: 'Knust 2 limebiter, is, 2 cl Xanté, 2 cl vodka, toppes med Sprite'
         },
         {
+            name: "Ramma's",
+            description: 'Dette får du aldri vite.'
+        },
+        {
+            name: "Moa's",
+            description: 'Dette får du aldri vite.'
+        },
+        {
             name: 'Sureføtter',
             description: '2 cl Jägermeister, 2 cl Peachtree, sour mix (shakes), toppes med Sprite'
         },

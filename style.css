@@ -432,6 +432,8 @@ h2::after {
     border: 1px solid rgba(212, 175, 55, 0.1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-item::before {
@@ -476,12 +478,36 @@ h2::after {
 }
 
 .contact-item:hover p {
-    color: var(--text);
+    color: var(--accent);
 }
 .contact-item a {
     text-decoration: none;
     list-style: none;
     color: var(--text);
+    transition: color 0.3s ease;
+}
+.contact-item a:hover {
+    text-decoration: none;
+    list-style: none;
+    color: var(--accent-color);
+transform: translateY(-3px) rotate(2.5deg);
+}
+ 
+ #social {
+    color: var(--accent);
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 2rem;
+    padding-left: 4.5rem;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    bottom: 10px;
+}
+ 
+ #social:hover {
+    color: var(--text);
+    transform: translateX(-3px) rotate(8deg);
+    text-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
 }
 
 /* Enhanced Footer */
