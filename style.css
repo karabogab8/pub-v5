@@ -490,7 +490,7 @@ h2::after {
     text-decoration: none;
     list-style: none;
     color: var(--accent-color);
-transform: translateY(-3px) rotate(2.5deg);
+transform: translateY(-3px) ;
 }
  
 .contact-item .social {
